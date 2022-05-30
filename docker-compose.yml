@@ -1,0 +1,13 @@
+version: "3"
+
+services:
+  openfoam:
+    container_name: openfoam
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - type: bind
+        source: /mnt/c/Users/kenic/Desktop/openfoam/data
+        target: /home/openfoam/data
+    tty: true
